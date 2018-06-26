@@ -12,13 +12,41 @@
   <body>
     <div class="container">
         <ul class="nav nav-tabs">
-          <li class="nav-item">
+          <li class="pull-right">
+            <%= link_to "About", welcome_about_path, class:"nav-link" %>
+          </li>
+          <li class="pull-right" >
             <%= link_to "Blocmetrics", welcome_index_path, class: "nav-link" %>
           </li>
-          <li class="nav-item">
-            <%= link_to "About", welcome_about_path, class:"nav-item" %>
-          </li>
+          <% if user_signed_in? %>
+            <li class="nav-item">
+              <%= link_to "Sign Out", destroy_user_session_url, method: :delete %>
+            </li>
+            <li class="nav-item">
+              <%= link_to current_user.username, edit_user_registration_path %>
+            </li>
+          <% else %>
+            <li class="nav-item">
+              <%= link_to "Sign In", new_user_session_url %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Sign Up", new_user_registration_path %>
+            </li>
+          <% end %>
         </ul>
+
+        <% if flash[:notice] %>
+           <div class="alert alert-success">
+             <button type="button" class="close" data-dismiss="alert">&times;</button>
+             <%= flash[:notice] %>
+           </div>
+         <% elsif flash[:alert] %>
+           <div class="alert alert-warning">
+             <button type="button" class="close" data-dismiss="alert">&times;</button>
+             <%= flash[:alert] %>
+           </div>
+         <% end %>
+
     <%= yield %>
     </div>
   </body>
