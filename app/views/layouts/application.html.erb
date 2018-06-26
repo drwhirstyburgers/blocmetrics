@@ -4,11 +4,22 @@
     <title>Blocmetrics</title>
     <%= csrf_meta_tags %>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <div class="container">
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <%= link_to "Blocmetrics", welcome_index_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "About", welcome_about_path, class:"nav-item" %>
+          </li>
+        </ul>
     <%= yield %>
+    </div>
   </body>
 </html>
