@@ -20,10 +20,10 @@
           </li>
           <% if user_signed_in? %>
             <li class="nav-item">
-              <%= link_to "Sign Out", destroy_user_session_url, method: :delete %>
+              <%= link_to current_user.username, edit_user_registration_path %>
             </li>
             <li class="nav-item">
-              <%= link_to current_user.username, edit_user_registration_path %>
+              <%= link_to "Sign Out", destroy_user_session_url, method: :delete %>
             </li>
           <% else %>
             <li class="nav-item">
