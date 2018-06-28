@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_many :applications
+
   attr_writer :login
 
   validate :validate_username
