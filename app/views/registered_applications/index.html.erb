@@ -1,1 +1,20 @@
 <h1><%= current_user.username.capitalize %>'s Applications</h1>
+
+<div class="row">
+  <div class="col-md-8">
+     <% @registered_applications.each do |app| %>
+       <div class="media">
+         <div class="media-body">
+           <h4 class="media-heading">
+             <%= link_to app.app_name, app %>
+           </h4>
+           <small>
+             <%= app.registration %>
+           </small>
+         </div>
+       </div>
+     <% end %>
+   </div>
+   <div class='col-md-4'>
+     <%= link_to "Register an app", new_registered_application, class: 'btn btn-success' %>
+ </div>

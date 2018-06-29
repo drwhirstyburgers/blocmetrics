@@ -3974,3 +3974,151 @@ Processing by RegisteredApplicationsController#index as HTML
 Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/registered_applications" for 127.0.0.1 at 2018-06-29 17:54:55 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RegisteredApplicationsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering registered_applications/index.html.erb within layouts/application
+  [1m[36mApplication Load (0.1ms)[0m  [1m[34mSELECT "applications".* FROM "applications" WHERE "applications"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered registered_applications/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 194ms (Views: 165.8ms | ActiveRecord: 0.8ms)
+
+
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/registered_applications" for 127.0.0.1 at 2018-06-29 17:58:57 -0400
+Processing by RegisteredApplicationsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering registered_applications/index.html.erb within layouts/application
+  [1m[36mApplication Load (0.1ms)[0m  [1m[34mSELECT "applications".* FROM "applications" WHERE "applications"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered registered_applications/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mApplication Load (0.3ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mApplication Load (0.4ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" ORDER BY "applications"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mApplication Load (0.1ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" ORDER BY "applications"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mApplication Load (0.1ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" ORDER BY "applications"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/registered_applications" for 127.0.0.1 at 2018-06-29 18:28:21 -0400
+Processing by RegisteredApplicationsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering registered_applications/index.html.erb within layouts/application
+  [1m[36mApplication Load (0.1ms)[0m  [1m[34mSELECT "applications".* FROM "applications" WHERE "applications"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered registered_applications/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 28ms (Views: 14.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/registered_applications/new" for 127.0.0.1 at 2018-06-29 18:28:23 -0400
+Processing by RegisteredApplicationsController#new as HTML
+  Rendering registered_applications/new.html.erb within layouts/application
+  Rendered registered_applications/new.html.erb within layouts/application (78.4ms)
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `applications_path' for #<#<Class:0x00007f1660362018>:0x00007f1658085ca8>):
+    1: <h1>Register an App</h1>
+    2: <%= form_for @registered_application do |f| %>
+    3:   <div class="form-group">
+    4:     <%= f.label :registration %>
+    5:     <%= f.text_field :registration, class: 'form-control', placeholder: "Enter the app URL" %>
+  
+app/views/registered_applications/new.html.erb:2:in `_app_views_registered_applications_new_html_erb__3888961520593949264_69866971476720'
+Started GET "/registered_applications" for 127.0.0.1 at 2018-06-29 18:30:08 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RegisteredApplicationsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering registered_applications/index.html.erb within layouts/application
+  [1m[36mApplication Load (0.1ms)[0m  [1m[34mSELECT "applications".* FROM "applications" WHERE "applications"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered registered_applications/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 194ms (Views: 164.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/registered_applications/new" for 127.0.0.1 at 2018-06-29 18:30:11 -0400
+Processing by RegisteredApplicationsController#new as HTML
+  Rendering registered_applications/new.html.erb within layouts/application
+  Rendered registered_applications/new.html.erb within layouts/application (75.9ms)
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `applications_path' for #<#<Class:0x00007f44543d8750>:0x00007f4455786680>):
+    1: <h1>Register an App</h1>
+    2: <%= form_for @registered_application do |f| %>
+    3:   <div class="form-group">
+    4:     <%= f.label :registration %>
+    5:     <%= f.text_field :registration, class: 'form-control', placeholder: "Enter the app URL" %>
+  
+app/views/registered_applications/new.html.erb:2:in `_app_views_registered_applications_new_html_erb___1018937172340448594_69965734231720'
+Started GET "/registered_applications" for 127.0.0.1 at 2018-06-29 18:33:18 -0400
+Processing by RegisteredApplicationsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering registered_applications/index.html.erb within layouts/application
+  [1m[36mApplication Load (0.1ms)[0m  [1m[34mSELECT "applications".* FROM "applications" WHERE "applications"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered registered_applications/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/registered_applications/new" for 127.0.0.1 at 2018-06-29 18:34:48 -0400
+Processing by RegisteredApplicationsController#new as HTML
+  Rendering registered_applications/new.html.erb within layouts/application
+  Rendered registered_applications/new.html.erb within layouts/application (73.1ms)
+Completed 500 Internal Server Error in 76ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `applications_path' for #<#<Class:0x00007f44543d8750>:0x00007f4440016770>):
+    1: <h1>Register an App</h1>
+    2: <%= form_for @registered_application do |f| %>
+    3:   <div class="form-group">
+    4:     <%= f.label :registration %>
+    5:     <%= f.text_field :registration, class: 'form-control', placeholder: "Enter the app URL" %>
+  
+app/views/registered_applications/new.html.erb:2:in `_app_views_registered_applications_new_html_erb___1018937172340448594_69965554169940'
+Started GET "/registered_applications/new" for 127.0.0.1 at 2018-06-29 18:42:52 -0400
+Processing by RegisteredApplicationsController#new as HTML
+  Rendering registered_applications/new.html.erb within layouts/application
+  Rendered registered_applications/new.html.erb within layouts/application (85.7ms)
+Completed 500 Internal Server Error in 87ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `applications_path' for #<#<Class:0x00007f44543d8750>:0x00007f445422aae8>):
+    1: <h1>Register an App</h1>
+    2: <%= form_for @registered_application do |f| %>
+    3:   <div class="form-group">
+    4:     <%= f.label :registration %>
+    5:     <%= f.text_field :registration, class: 'form-control', placeholder: "Enter the app URL" %>
+  
+app/views/registered_applications/new.html.erb:2:in `_app_views_registered_applications_new_html_erb___1018937172340448594_69965723104780'
+Started GET "/registered_applications/new" for 127.0.0.1 at 2018-06-29 18:43:29 -0400
+Processing by RegisteredApplicationsController#new as HTML
+  Rendering registered_applications/new.html.erb within layouts/application
+  Rendered registered_applications/new.html.erb within layouts/application (66.6ms)
+Completed 500 Internal Server Error in 74ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `applications_path' for #<#<Class:0x00007f4448ef0d10>:0x00007f4448edeef8>):
+    1: <h1>Register an App</h1>
+    2: <%= form_for @registered_application do |f| %>
+    3:   <div class="form-group">
+    4:     <%= f.label :registration %>
+    5:     <%= f.text_field :registration, class: 'form-control', placeholder: "Enter the app URL" %>
+  
+app/views/registered_applications/new.html.erb:2:in `_app_views_registered_applications_new_html_erb___1018937172340448594_69965629066060'
+Started GET "/registered_applications/new" for 127.0.0.1 at 2018-06-29 18:43:51 -0400
+Processing by RegisteredApplicationsController#new as HTML
+  Rendering registered_applications/new.html.erb within layouts/application
+  Rendered registered_applications/new.html.erb within layouts/application (67.7ms)
+Completed 500 Internal Server Error in 76ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `applications_path' for #<#<Class:0x00007f444c1cf560>:0x00007f444c1cd580>):
+    1: <h1>Register an App</h1>
+    2: <%= form_for @registered_application do |f| %>
+    3:   <div class="form-group">
+    4:     <%= f.label :registration %>
+    5:     <%= f.text_field :registration, class: 'form-control', placeholder: "Enter the app URL" %>
+  
+app/views/registered_applications/new.html.erb:2:in `_app_views_registered_applications_new_html_erb___1018937172340448594_69965655736220'
