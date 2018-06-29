@@ -14,6 +14,7 @@ ActiveRecord::Schema.define(version: 20180628192954) do
 
   create_table "applications", force: :cascade do |t|
     t.string "registration"
+    t.string "app_name"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
