@@ -4456,3 +4456,51 @@ Processing by RegisteredApplicationsController#new as HTML
 Completed 200 OK in 30ms (Views: 23.8ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/registered_applications/new" for 127.0.0.1 at 2018-07-02 17:38:48 -0400
+Processing by RegisteredApplicationsController#new as HTML
+  Rendering registered_applications/new.html.erb within layouts/application
+  Rendered registered_applications/new.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 31ms (Views: 29.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/registered_applications/new" for 127.0.0.1 at 2018-07-02 17:41:51 -0400
+Processing by RegisteredApplicationsController#new as HTML
+  Rendering registered_applications/new.html.erb within layouts/application
+  Rendered registered_applications/new.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/registered_applications" for 127.0.0.1 at 2018-07-02 17:43:34 -0400
+Processing by RegisteredApplicationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hJh5H+DRFcgBXlCsLHjaeShtpKPsLpLuKclXYfzmXejuq5FRvGUju+s0YjvRo2mgukD3fmvjj2P2tZO6Xl+3yQ==", "registered_application"=>{"registration"=>"https://quiet-meadow-88838.herokuapp.com/", "app_name"=>"Blocipedia"}, "commit"=>"Save"}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: registered_applications):
+  
+app/controllers/registered_applications_controller.rb:33:in `app_params'
+app/controllers/registered_applications_controller.rb:15:in `create'
+Started POST "/registered_applications" for 127.0.0.1 at 2018-07-02 17:44:38 -0400
+Processing by RegisteredApplicationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hJh5H+DRFcgBXlCsLHjaeShtpKPsLpLuKclXYfzmXejuq5FRvGUju+s0YjvRo2mgukD3fmvjj2P2tZO6Xl+3yQ==", "registered_application"=>{"registration"=>"https://quiet-meadow-88838.herokuapp.com/", "app_name"=>"Blocipedia"}, "commit"=>"Save"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "registered_applications" ("registration", "app_name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration", "https://quiet-meadow-88838.herokuapp.com/"], ["app_name", "Blocipedia"], ["user_id", 1], ["created_at", "2018-07-02 21:44:38.451681"], ["updated_at", "2018-07-02 21:44:38.451681"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/registered_applications/1
+Completed 302 Found in 32ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/registered_applications/1" for 127.0.0.1 at 2018-07-02 17:44:38 -0400
+Processing by RegisteredApplicationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRegisteredApplication Load (0.2ms)[0m  [1m[34mSELECT  "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering registered_applications/show.html.erb within layouts/application
+  Rendered registered_applications/show.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.3ms)
+
+
