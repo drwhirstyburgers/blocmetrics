@@ -4122,3 +4122,337 @@ ActionView::Template::Error (undefined method `applications_path' for #<#<Class:
     5:     <%= f.text_field :registration, class: 'form-control', placeholder: "Enter the app URL" %>
   
 app/views/registered_applications/new.html.erb:2:in `_app_views_registered_applications_new_html_erb___1018937172340448594_69965655736220'
+Started GET "/registered_applications/new" for 127.0.0.1 at 2018-06-29 18:52:30 -0400
+Processing by RegisteredApplicationsController#new as HTML
+  Rendering registered_applications/new.html.erb within layouts/application
+  Rendered registered_applications/new.html.erb within layouts/application (81.9ms)
+Completed 500 Internal Server Error in 92ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `applications_path' for #<#<Class:0x00007f4440edb878>:0x00007f4440ed9c80>):
+    1: <h1>Register an App</h1>
+    2: <%= form_for @registered_application do |f| %>
+    3:   <div class="form-group">
+    4:     <%= f.label :registration %>
+    5:     <%= f.text_field :registration, class: 'form-control', placeholder: "Enter the app URL" %>
+  
+app/views/registered_applications/new.html.erb:2:in `_app_views_registered_applications_new_html_erb___1018937172340448594_69965562315020'
+Started GET "/registered_applications/new" for 127.0.0.1 at 2018-06-29 19:06:41 -0400
+Processing by RegisteredApplicationsController#new as HTML
+  Rendering registered_applications/new.html.erb within layouts/application
+  Rendered registered_applications/new.html.erb within layouts/application (84.9ms)
+Completed 500 Internal Server Error in 94ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `applications_path' for #<#<Class:0x00007f44483b4168>:0x00007f44483aa500>):
+    1: <h1>Register an App</h1>
+    2: <%= form_for @registered_application do |f| %>
+    3:   <div class="form-group">
+    4:     <%= f.label :registration %>
+    5:     <%= f.text_field :registration, class: 'form-control', placeholder: "Enter the app URL" %>
+  
+app/views/registered_applications/new.html.erb:2:in `_app_views_registered_applications_new_html_erb___1018937172340448594_69965623174500'
+Started GET "/registered_applications/new" for 127.0.0.1 at 2018-06-29 19:06:54 -0400
+Processing by RegisteredApplicationsController#new as HTML
+  Rendering registered_applications/new.html.erb within layouts/application
+  Rendered registered_applications/new.html.erb within layouts/application (64.2ms)
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `applications_path' for #<#<Class:0x00007f4448ad4808>:0x00007f4448abea30>):
+    1: <h1>Register an App</h1>
+    2: <%= form_for @registered_application do |f| %>
+    3:   <div class="form-group">
+    4:     <%= f.label :registration %>
+    5:     <%= f.text_field :registration, class: 'form-control', placeholder: "Enter the app URL" %>
+  
+app/views/registered_applications/new.html.erb:2:in `_app_views_registered_applications_new_html_erb___1018937172340448594_69965626910900'
+Started GET "/registered_applications/new" for 127.0.0.1 at 2018-06-29 19:09:14 -0400
+Processing by RegisteredApplicationsController#new as HTML
+  Rendering registered_applications/new.html.erb within layouts/application
+  Rendered registered_applications/new.html.erb within layouts/application (64.8ms)
+Completed 500 Internal Server Error in 73ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `applications_path' for #<#<Class:0x00007f4448202a90>:0x00007f4448200e98>):
+    1: <h1>Register an App</h1>
+    2: <%= form_for @registered_application do |f| %>
+    3:   <div class="form-group">
+    4:     <%= f.label :registration %>
+    5:     <%= f.text_field :registration, class: 'form-control', placeholder: "Enter the app URL" %>
+  
+app/views/registered_applications/new.html.erb:2:in `_app_views_registered_applications_new_html_erb___1018937172340448594_69965622286840'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20180626214803)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "confirmation_token" varchar, "confirmed_at" datetime, "confirmation_sent_at" datetime, "unconfirmed_email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180626214803"]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddUsernameToUsers (20180627200944)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "username" varchar[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_confirmation_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_confirmation_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_username" ON "users" ("username")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180627200944"]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateRegisteredApplications (20180628192954)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateRegisteredApplications (20180628192954)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "registered_applications" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "registration" varchar, "app_name" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_aa843e9c0b"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_registered_applications_on_user_id" ON "registered_applications" ("user_id")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180628192954"]]
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-07-02 21:23:29.512087"], ["updated_at", "2018-07-02 21:23:29.512087"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_registered_applications_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_registered_applications_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_username' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_username' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_confirmation_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_confirmation_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started GET "/" for 127.0.0.1 at 2018-07-02 17:24:47 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 175ms (Views: 167.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-07-02 17:24:50 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 66ms (Views: 53.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-07-02 17:25:00 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BSA2ES2AEE6oNRhd8MCBqabykwhbvZqF3OEuI9Yxyx0h1eLNwjMw8Ey4IGKP6NXAq7hWd8FjShp7CvA+Vv83zg==", "user"=>{"username"=>"dhirst", "email"=>"dave.hirst50@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dhirst"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dave.hirst50@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "confirmation_token", "confirmation_sent_at", "created_at", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["email", "dave.hirst50@gmail.com"], ["encrypted_password", "$2a$11$dS/58xD2Q5wCsGPAl2AHhuu2/jLTUXg4sbVjJYtu83Qi8VeLaIWQe"], ["confirmation_token", "SjEPExwPTNt9cyzwyjRP"], ["confirmation_sent_at", "2018-07-02 21:25:00.445338"], ["created_at", "2018-07-02 21:25:00.445224"], ["updated_at", "2018-07-02 21:25:00.445224"], ["username", "dhirst"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  Rendering devise/mailer/confirmation_instructions.html.erb
+  Rendered devise/mailer/confirmation_instructions.html.erb (1.5ms)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 139.2ms
+Sent mail to dave.hirst50@gmail.com (1181.4ms)
+Date: Mon, 02 Jul 2018 17:25:00 -0400
+From: dave.hirst50@gmail.com
+Reply-To: dave.hirst50@gmail.com
+To: dave.hirst50@gmail.com
+Message-ID: <5b3a982c92d58_578c2ac5061777a8103bc@hirsty-MS-7850.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome dave.hirst50@gmail.com!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=SjEPExwPTNt9cyzwyjRP">Confirm my account</a></p>
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 1468ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-02 17:25:01 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 13ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/confirmation?confirmation_token=SjEPExwPTNt9cyzwyjRP" for 127.0.0.1 at 2018-07-02 17:25:06 -0400
+Processing by Devise::ConfirmationsController#show as HTML
+  Parameters: {"confirmation_token"=>"SjEPExwPTNt9cyzwyjRP"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["confirmation_token", "SjEPExwPTNt9cyzwyjRP"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "confirmed_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["confirmed_at", "2018-07-02 21:25:06.802298"], ["updated_at", "2018-07-02 21:25:06.802695"], ["id", 1]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 9ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-07-02 17:25:06 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 30ms (Views: 29.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-07-02 17:25:14 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M7bJ3LM+8IGK6VPeZ7i9odk12pwdTnAT7omot8TTCIXyqeB0QkGZRM7PoXSa/+irf4j7kr+6vaVFTz9t4wYq1A==", "user"=>{"login"=>"dhirst", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (lower(username) = 'dhirst' OR lower(email) = 'dhirst') ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2018-07-02 21:25:14.477106"], ["last_sign_in_at", "2018-07-02 21:25:14.477106"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2018-07-02 21:25:14.477650"], ["id", 1]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 123ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-02 17:25:14 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-07-02 17:25:17 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/registered_applications" for 127.0.0.1 at 2018-07-02 17:25:27 -0400
+Processing by RegisteredApplicationsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering registered_applications/index.html.erb within layouts/application
+  [1m[36mRegisteredApplication Load (0.1ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered registered_applications/index.html.erb within layouts/application (152.6ms)
+Completed 500 Internal Server Error in 162ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_registered_application' for #<#<Class:0x00007fdcfc1d84a0>:0x00007fdcfc1dfed0>
+Did you mean?  new_registered_application_url
+               new_registered_application_path
+               @registered_applications):
+    16:      <% end %>
+    17:    </div>
+    18:    <div class='col-md-4'>
+    19:      <%= link_to "Register an app", new_registered_application, class: 'btn btn-success' %>
+    20:  </div>
+  
+app/views/registered_applications/index.html.erb:19:in `_app_views_registered_applications_index_html_erb__1053446595500435550_70293549663940'
+Started GET "/registered_applications" for 127.0.0.1 at 2018-07-02 17:26:16 -0400
+Processing by RegisteredApplicationsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering registered_applications/index.html.erb within layouts/application
+  [1m[36mRegisteredApplication Load (0.1ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered registered_applications/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/registered_applications/new" for 127.0.0.1 at 2018-07-02 17:26:18 -0400
+Processing by RegisteredApplicationsController#new as HTML
+  Rendering registered_applications/new.html.erb within layouts/application
+  Rendered registered_applications/new.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 30ms (Views: 23.8ms | ActiveRecord: 0.4ms)
+
+

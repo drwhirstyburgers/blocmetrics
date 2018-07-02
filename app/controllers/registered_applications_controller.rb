@@ -1,18 +1,18 @@
 class RegisteredApplicationsController < ApplicationController
   def index
-    @registered_applications = current_user.applications
+    @registered_applications = current_user.registered_applications
   end
 
   def show
-    @registered_application = Application.find(params[:id])
+    @registered_application = RegisteredApplication.find(params[:id])
   end
 
   def new
-    @registered_application = Application.new
+    @registered_application = RegisteredApplication.new
   end
 
   def create
-    @registered_application = Application.new(app_params)
+    @registered_application = RegisteredApplication.new(app_params)
     @registered_application.user = current_user
 
     if @registered_application.save
@@ -30,6 +30,6 @@ class RegisteredApplicationsController < ApplicationController
   private
 
   def app_params
-    params.require(:registered_applications).permit(:registration, :app_name)
+    params.require(:registered_applications).permit(:registration, :app_name, :user_id)
   end
 end
