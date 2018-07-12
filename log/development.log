@@ -5991,3 +5991,54 @@ Processing by RegisteredApplicationsController#show as HTML
 Completed 200 OK in 18ms (Views: 15.5ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/registered_applications/9" for 127.0.0.1 at 2018-07-12 14:38:24 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RegisteredApplicationsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mRegisteredApplication Load (0.2ms)[0m  [1m[34mSELECT  "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 9]]
+  Rendering registered_applications/show.html.erb within layouts/application
+  Rendered registered_applications/show.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 217ms (Views: 188.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2018-07-12 14:52:26 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (300.1ms)
+Completed 200 OK in 326ms (Views: 314.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/registered_applications" for 127.0.0.1 at 2018-07-12 14:52:27 -0400
+Processing by RegisteredApplicationsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering registered_applications/index.html.erb within layouts/application
+  [1m[36mRegisteredApplication Load (0.1ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered registered_applications/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 27ms (Views: 21.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/registered_applications/5" for 127.0.0.1 at 2018-07-12 14:52:28 -0400
+Processing by RegisteredApplicationsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mRegisteredApplication Load (0.2ms)[0m  [1m[34mSELECT  "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 5]]
+  Rendering registered_applications/show.html.erb within layouts/application
+  Rendered registered_applications/show.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 28ms (Views: 16.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/registered_applications/5" for 127.0.0.1 at 2018-07-12 14:53:38 -0400
+Processing by RegisteredApplicationsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mRegisteredApplication Load (0.1ms)[0m  [1m[34mSELECT  "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 5]]
+  Rendering registered_applications/show.html.erb within layouts/application
+  Rendered registered_applications/show.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.3ms)
+
+
