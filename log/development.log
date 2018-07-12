@@ -6042,3 +6042,155 @@ Processing by RegisteredApplicationsController#show as HTML
 Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.3ms)
 
 
+Started POST "/api/events" for 127.0.0.1 at 2018-07-12 15:36:17 -0400
+  
+ActionController::RoutingError (undefined method `before_filter' for API::EventsController:Class
+Did you mean?  before_action):
+  
+app/controllers/api/events_controller.rb:2:in `<class:EventsController>'
+app/controllers/api/events_controller.rb:1:in `<top (required)>'
+Started POST "/api/events" for 127.0.0.1 at 2018-07-12 15:40:23 -0400
+  
+ActionController::RoutingError (undefined method `before_filter' for API::EventsController:Class
+Did you mean?  before_action):
+  
+app/controllers/api/events_controller.rb:2:in `<class:EventsController>'
+app/controllers/api/events_controller.rb:1:in `<top (required)>'
+Started GET "/registered_applications/5" for 127.0.0.1 at 2018-07-12 15:40:59 -0400
+Processing by RegisteredApplicationsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mRegisteredApplication Load (0.1ms)[0m  [1m[34mSELECT  "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 5]]
+  Rendering registered_applications/show.html.erb within layouts/application
+  Rendered registered_applications/show.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 47ms (Views: 31.2ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/api/events" for 127.0.0.1 at 2018-07-12 15:41:23 -0400
+  
+ActionController::RoutingError (undefined method `before_filter' for API::EventsController:Class
+Did you mean?  before_action):
+  
+app/controllers/api/events_controller.rb:2:in `<class:EventsController>'
+app/controllers/api/events_controller.rb:1:in `<top (required)>'
+Started POST "/api/events" for 127.0.0.1 at 2018-07-12 15:42:24 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by API::EventsController#create as JSON
+  Parameters: {"name"=>"foobar", "event"=>{}}
+  [1m[36mRegisteredApplication Load (0.2ms)[0m  [1m[34mSELECT  "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."url" = ? LIMIT ?[0m  [["url", "http://registered_application.com"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: registered_applications.url: SELECT  "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."url" = ? LIMIT ?):
+  
+app/controllers/api/events_controller.rb:11:in `create'
+Started POST "/api/events" for 127.0.0.1 at 2018-07-12 15:43:31 -0400
+Processing by API::EventsController#create as JSON
+  Parameters: {"name"=>"foobar", "event"=>{}}
+  [1m[36mRegisteredApplication Load (0.4ms)[0m  [1m[34mSELECT  "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."url" = ? LIMIT ?[0m  [["url", "https://quiet-meadow-88838.herokuapp.com"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: registered_applications.url: SELECT  "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."url" = ? LIMIT ?):
+  
+app/controllers/api/events_controller.rb:11:in `create'
+Started POST "/api/events" for 127.0.0.1 at 2018-07-12 15:44:03 -0400
+Processing by API::EventsController#create as JSON
+  Parameters: {"name"=>"foobar", "event"=>{}}
+  [1m[36mRegisteredApplication Load (0.1ms)[0m  [1m[34mSELECT  "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."registration" = ? LIMIT ?[0m  [["registration", "https://quiet-meadow-88838.herokuapp.com"], ["LIMIT", 1]]
+Completed 422 Unprocessable Entity in 5ms (Views: 0.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/registered_applications/5" for 127.0.0.1 at 2018-07-12 15:44:13 -0400
+Processing by RegisteredApplicationsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mRegisteredApplication Load (0.2ms)[0m  [1m[34mSELECT  "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 5]]
+  Rendering registered_applications/show.html.erb within layouts/application
+  Rendered registered_applications/show.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 188ms (Views: 168.3ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/api/events" for 127.0.0.1 at 2018-07-12 15:44:57 -0400
+Processing by API::EventsController#create as JSON
+  Parameters: {"event_name"=>"foobar", "event"=>{"event_name"=>"foobar"}}
+  [1m[36mRegisteredApplication Load (0.1ms)[0m  [1m[34mSELECT  "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."registration" = ? LIMIT ?[0m  [["registration", "https://quiet-meadow-88838.herokuapp.com"], ["LIMIT", 1]]
+Completed 422 Unprocessable Entity in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/registered_applications/5" for 127.0.0.1 at 2018-07-12 15:45:02 -0400
+Processing by RegisteredApplicationsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mRegisteredApplication Load (0.1ms)[0m  [1m[34mSELECT  "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 5]]
+  Rendering registered_applications/show.html.erb within layouts/application
+  Rendered registered_applications/show.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/registered_applications" for 127.0.0.1 at 2018-07-12 15:45:04 -0400
+Processing by RegisteredApplicationsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering registered_applications/index.html.erb within layouts/application
+  [1m[36mRegisteredApplication Load (0.2ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered registered_applications/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/registered_applications/5" for 127.0.0.1 at 2018-07-12 15:45:05 -0400
+Processing by RegisteredApplicationsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mRegisteredApplication Load (0.2ms)[0m  [1m[34mSELECT  "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 5]]
+  Rendering registered_applications/show.html.erb within layouts/application
+  Rendered registered_applications/show.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 20ms (Views: 17.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/events" for 127.0.0.1 at 2018-07-12 15:45:35 -0400
+Processing by API::EventsController#create as JSON
+  Parameters: {"name"=>"foobar", "event"=>{}}
+  [1m[36mRegisteredApplication Load (0.1ms)[0m  [1m[34mSELECT  "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."registration" = ? LIMIT ?[0m  [["registration", "http://registered_application.com"], ["LIMIT", 1]]
+Completed 422 Unprocessable Entity in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/api/events" for 127.0.0.1 at 2018-07-12 15:46:03 -0400
+Processing by API::EventsController#create as JSON
+  Parameters: {"event_name"=>"foobar", "event"=>{"event_name"=>"foobar"}}
+  [1m[36mRegisteredApplication Load (0.1ms)[0m  [1m[34mSELECT  "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."registration" = ? LIMIT ?[0m  [["registration", "http://registered_application.com"], ["LIMIT", 1]]
+Completed 422 Unprocessable Entity in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/api/events" for 127.0.0.1 at 2018-07-12 15:47:24 -0400
+Processing by API::EventsController#create as JSON
+  Parameters: {"event"=>"foobar"}
+  [1m[36mRegisteredApplication Load (0.1ms)[0m  [1m[34mSELECT  "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."registration" = ? LIMIT ?[0m  [["registration", "http://registered_application.com"], ["LIMIT", 1]]
+Completed 422 Unprocessable Entity in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/api/events" for 127.0.0.1 at 2018-07-12 15:48:08 -0400
+Processing by API::EventsController#create as JSON
+  Parameters: {"event_name"=>"foobar", "event"=>{"event_name"=>"foobar"}}
+  [1m[36mRegisteredApplication Load (0.1ms)[0m  [1m[34mSELECT  "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."registration" = ? LIMIT ?[0m  [["registration", "http://registered_application.com"], ["LIMIT", 1]]
+Completed 422 Unprocessable Entity in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/api/events" for 127.0.0.1 at 2018-07-12 15:52:34 -0400
+  
+ArgumentError (Before process_action callback :verify_authenticity_token has not been defined):
+  
+app/controllers/api/events_controller.rb:2:in `<class:EventsController>'
+app/controllers/api/events_controller.rb:1:in `<top (required)>'
+Started POST "/api/events" for 127.0.0.1 at 2018-07-12 15:53:12 -0400
+Processing by API::EventsController#create as JSON
+  Parameters: {"event_name"=>"foobar", "event"=>{"event_name"=>"foobar"}}
+  [1m[36mRegisteredApplication Load (0.1ms)[0m  [1m[34mSELECT  "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."registration" = ? LIMIT ?[0m  [["registration", "http://registered_application.com"], ["LIMIT", 1]]
+Completed 422 Unprocessable Entity in 4ms (Views: 0.1ms | ActiveRecord: 0.8ms)
+
+
