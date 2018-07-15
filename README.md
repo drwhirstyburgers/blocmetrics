@@ -1,26 +1,13 @@
-# README
+# Blocmetrics
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Client side JS snippet
 
-Things you may want to cover:
+var blocmetrics = {};
+  blocmetrics.report = function(eventName){
+    var event = {event: { event_name: eventName }};
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# blocmetrics
-# blocmetrics
+    var request = new XMLHttpRequest();
+    request.open("POST", "http://localhost:3000/api/events", true);
+    request.setRequestHeader('Content-Type', 'application/json');
+    request.send(JSON.stringify(event));
+  };

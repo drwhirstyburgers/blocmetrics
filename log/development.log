@@ -6194,3 +6194,281 @@ Processing by API::EventsController#create as JSON
 Completed 422 Unprocessable Entity in 4ms (Views: 0.1ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-07-15 16:11:00 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 192ms (Views: 184.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/registered_applications" for 127.0.0.1 at 2018-07-15 16:11:02 -0400
+Processing by RegisteredApplicationsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering registered_applications/index.html.erb within layouts/application
+  [1m[36mRegisteredApplication Load (0.1ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered registered_applications/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 44ms (Views: 24.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/registered_applications/new" for 127.0.0.1 at 2018-07-15 16:11:05 -0400
+Processing by RegisteredApplicationsController#new as HTML
+  Rendering registered_applications/new.html.erb within layouts/application
+  Rendered registered_applications/new.html.erb within layouts/application (360.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 376ms (Views: 375.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/registered_applications" for 127.0.0.1 at 2018-07-15 16:11:22 -0400
+Processing by RegisteredApplicationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+pAmuHwvf0p/UD8P8JXQ01ZQuev6lJ+WSxhenHfAzR+LCnVngx8yRf/DcZ1Qkrs30SuHOCp+sY9KEzTjF175Tw==", "registered_application"=>{"registration"=>"http://localhost:2000", "app_name"=>"Blocipedia"}, "commit"=>"Save"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "registered_applications" ("registration", "app_name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration", "http://localhost:2000"], ["app_name", "Blocipedia"], ["user_id", 1], ["created_at", "2018-07-15 20:11:22.764174"], ["updated_at", "2018-07-15 20:11:22.764174"]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/registered_applications/67
+Completed 302 Found in 7ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/registered_applications/67" for 127.0.0.1 at 2018-07-15 16:11:22 -0400
+Processing by RegisteredApplicationsController#show as HTML
+  Parameters: {"id"=>"67"}
+  [1m[36mRegisteredApplication Load (0.1ms)[0m  [1m[34mSELECT  "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."id" = ? LIMIT ?[0m  [["id", 67], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 67]]
+  Rendering registered_applications/show.html.erb within layouts/application
+  Rendered registered_applications/show.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 23ms (Views: 16.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/registered_applications/67" for 127.0.0.1 at 2018-07-15 16:11:30 -0400
+Processing by RegisteredApplicationsController#show as HTML
+  Parameters: {"id"=>"67"}
+  [1m[36mRegisteredApplication Load (0.1ms)[0m  [1m[34mSELECT  "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."id" = ? LIMIT ?[0m  [["id", 67], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 67]]
+  Rendering registered_applications/show.html.erb within layouts/application
+  Rendered registered_applications/show.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 17ms (Views: 14.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/registered_applications" for 127.0.0.1 at 2018-07-15 16:11:33 -0400
+Processing by RegisteredApplicationsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering registered_applications/index.html.erb within layouts/application
+  [1m[36mRegisteredApplication Load (0.1ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered registered_applications/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/registered_applications/67" for 127.0.0.1 at 2018-07-15 16:11:37 -0400
+Processing by RegisteredApplicationsController#show as HTML
+  Parameters: {"id"=>"67"}
+  [1m[36mRegisteredApplication Load (0.1ms)[0m  [1m[34mSELECT  "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."id" = ? LIMIT ?[0m  [["id", 67], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 67]]
+  Rendering registered_applications/show.html.erb within layouts/application
+  Rendered registered_applications/show.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/registered_applications" for 127.0.0.1 at 2018-07-15 16:16:15 -0400
+Processing by RegisteredApplicationsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering registered_applications/index.html.erb within layouts/application
+  [1m[36mRegisteredApplication Load (0.2ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered registered_applications/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 22ms (Views: 19.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/registered_applications/5" for 127.0.0.1 at 2018-07-15 16:16:16 -0400
+Processing by RegisteredApplicationsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mRegisteredApplication Load (0.1ms)[0m  [1m[34mSELECT  "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 5]]
+  Rendering registered_applications/show.html.erb within layouts/application
+  Rendered registered_applications/show.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 28ms (Views: 15.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/registered_applications" for 127.0.0.1 at 2018-07-15 16:16:19 -0400
+Processing by RegisteredApplicationsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering registered_applications/index.html.erb within layouts/application
+  [1m[36mRegisteredApplication Load (0.1ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered registered_applications/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 21ms (Views: 18.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/registered_applications/67" for 127.0.0.1 at 2018-07-15 16:16:20 -0400
+Processing by RegisteredApplicationsController#show as HTML
+  Parameters: {"id"=>"67"}
+  [1m[36mRegisteredApplication Load (0.1ms)[0m  [1m[34mSELECT  "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."id" = ? LIMIT ?[0m  [["id", 67], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 67]]
+  Rendering registered_applications/show.html.erb within layouts/application
+  Rendered registered_applications/show.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 21ms (Views: 19.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/registered_applications/67" for 127.0.0.1 at 2018-07-15 16:16:33 -0400
+Processing by RegisteredApplicationsController#show as HTML
+  Parameters: {"id"=>"67"}
+  [1m[36mRegisteredApplication Load (0.1ms)[0m  [1m[34mSELECT  "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."id" = ? LIMIT ?[0m  [["id", 67], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 67]]
+  Rendering registered_applications/show.html.erb within layouts/application
+  Rendered registered_applications/show.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 18ms (Views: 15.9ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/registered_applications/67" for 127.0.0.1 at 2018-07-15 16:19:51 -0400
+Processing by RegisteredApplicationsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"axZ+2BCjroGw0nL49aJx8bhktUD8UbsE62oXEO89BZJhrv+y7fQe+/7vxXlr6H0IUhbYk8vOYEKNP390iX4QyA==", "id"=>"67"}
+  [1m[36mRegisteredApplication Load (0.1ms)[0m  [1m[34mSELECT  "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."id" = ? LIMIT ?[0m  [["id", 67], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "registered_applications" WHERE "registered_applications"."id" = ?[0m  [["id", 67]]
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/registered_applications
+Completed 302 Found in 6ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/registered_applications" for 127.0.0.1 at 2018-07-15 16:19:51 -0400
+Processing by RegisteredApplicationsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering registered_applications/index.html.erb within layouts/application
+  [1m[36mRegisteredApplication Load (0.1ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered registered_applications/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/registered_applications/new" for 127.0.0.1 at 2018-07-15 16:19:52 -0400
+Processing by RegisteredApplicationsController#new as HTML
+  Rendering registered_applications/new.html.erb within layouts/application
+  Rendered registered_applications/new.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 18ms (Views: 17.6ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/registered_applications" for 127.0.0.1 at 2018-07-15 16:20:09 -0400
+Processing by RegisteredApplicationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M5TK40GYt0YvBC2leXgvz0u3jzcrYeiPm8rwhi1KuWJCDpk8vqj6Sa+XYzfZf0QrzMyx5PuLxpaawZr5TdSNMg==", "registered_application"=>{"registration"=>"localhost:2000", "app_name"=>"Blocipedia"}, "commit"=>"Save"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "registered_applications" ("registration", "app_name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration", "localhost:2000"], ["app_name", "Blocipedia"], ["user_id", 1], ["created_at", "2018-07-15 20:20:09.445129"], ["updated_at", "2018-07-15 20:20:09.445129"]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/registered_applications/68
+Completed 302 Found in 8ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/registered_applications/68" for 127.0.0.1 at 2018-07-15 16:20:09 -0400
+Processing by RegisteredApplicationsController#show as HTML
+  Parameters: {"id"=>"68"}
+  [1m[36mRegisteredApplication Load (0.1ms)[0m  [1m[34mSELECT  "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 68]]
+  Rendering registered_applications/show.html.erb within layouts/application
+  Rendered registered_applications/show.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/registered_applications/68" for 127.0.0.1 at 2018-07-15 16:20:19 -0400
+Processing by RegisteredApplicationsController#show as HTML
+  Parameters: {"id"=>"68"}
+  [1m[36mRegisteredApplication Load (0.1ms)[0m  [1m[34mSELECT  "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 68]]
+  Rendering registered_applications/show.html.erb within layouts/application
+  Rendered registered_applications/show.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 19ms (Views: 16.0ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/registered_applications/68" for 127.0.0.1 at 2018-07-15 16:20:22 -0400
+Processing by RegisteredApplicationsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"5Br2Nr38pDmVDVUMFprLRLUHPUKpIQhl/d2zsx+GjvDuondcQKsUQ9sw4o2I0Me9X3VQkZ6+0yObiNvXecWbqg==", "id"=>"68"}
+  [1m[36mRegisteredApplication Load (0.5ms)[0m  [1m[34mSELECT  "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "registered_applications" WHERE "registered_applications"."id" = ?[0m  [["id", 68]]
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/registered_applications
+Completed 302 Found in 7ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/registered_applications" for 127.0.0.1 at 2018-07-15 16:20:22 -0400
+Processing by RegisteredApplicationsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering registered_applications/index.html.erb within layouts/application
+  [1m[36mRegisteredApplication Load (0.1ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered registered_applications/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/registered_applications/new" for 127.0.0.1 at 2018-07-15 16:20:24 -0400
+Processing by RegisteredApplicationsController#new as HTML
+  Rendering registered_applications/new.html.erb within layouts/application
+  Rendered registered_applications/new.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/registered_applications" for 127.0.0.1 at 2018-07-15 16:20:36 -0400
+Processing by RegisteredApplicationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QCcyjXbW5nGRG8ypEkDrG5195rmIDQCf6If7XWTn1XsxvWFSiearfhGIgjuyR4D/GgbYaljnLobpjJEiBHnhKw==", "registered_application"=>{"registration"=>"http://localhost:2000", "app_name"=>"Blocipedia"}, "commit"=>"Save"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "registered_applications" ("registration", "app_name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration", "http://localhost:2000"], ["app_name", "Blocipedia"], ["user_id", 1], ["created_at", "2018-07-15 20:20:36.523340"], ["updated_at", "2018-07-15 20:20:36.523340"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/registered_applications/69
+Completed 302 Found in 6ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/registered_applications/69" for 127.0.0.1 at 2018-07-15 16:20:36 -0400
+Processing by RegisteredApplicationsController#show as HTML
+  Parameters: {"id"=>"69"}
+  [1m[36mRegisteredApplication Load (0.1ms)[0m  [1m[34mSELECT  "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."id" = ? LIMIT ?[0m  [["id", 69], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 69]]
+  Rendering registered_applications/show.html.erb within layouts/application
+  Rendered registered_applications/show.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/registered_applications/69" for 127.0.0.1 at 2018-07-15 16:26:14 -0400
+Processing by RegisteredApplicationsController#show as HTML
+  Parameters: {"id"=>"69"}
+  [1m[36mRegisteredApplication Load (0.1ms)[0m  [1m[34mSELECT  "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."id" = ? LIMIT ?[0m  [["id", 69], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 69]]
+  Rendering registered_applications/show.html.erb within layouts/application
+  Rendered registered_applications/show.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 20ms (Views: 17.0ms | ActiveRecord: 0.4ms)
+
+
+Started OPTIONS "/api/events" for 127.0.0.1 at 2018-07-15 16:29:40 -0400
+Processing by API::EventsController#preflight as JSON
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/api/events" for 127.0.0.1 at 2018-07-15 16:29:40 -0400
+Processing by API::EventsController#create as JSON
+  Parameters: {"event"=>{"event_name"=>"about page loaded"}}
+  [1m[36mRegisteredApplication Load (0.2ms)[0m  [1m[34mSELECT  "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."registration" = ? LIMIT ?[0m  [["registration", "http://localhost:2000"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "about page loaded"], ["registered_application_id", 69], ["created_at", "2018-07-15 20:29:40.839662"], ["updated_at", "2018-07-15 20:29:40.839662"]]
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 201 Created in 7ms (Views: 0.6ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/registered_applications/69" for 127.0.0.1 at 2018-07-15 16:29:50 -0400
+Processing by RegisteredApplicationsController#show as HTML
+  Parameters: {"id"=>"69"}
+  [1m[36mRegisteredApplication Load (0.1ms)[0m  [1m[34mSELECT  "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."id" = ? LIMIT ?[0m  [["id", 69], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 69]]
+  Rendering registered_applications/show.html.erb within layouts/application
+  Rendered registered_applications/show.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 19ms (Views: 16.0ms | ActiveRecord: 0.4ms)
+
+
