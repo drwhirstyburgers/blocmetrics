@@ -16,7 +16,7 @@ end
 
 group :development do
   # Use sqlite3 as the development database for Active Record
-  gem 'sqlite3'
+  gem 'pg'
   gem 'web-console', '~> 2.0'
 end
 
@@ -50,3 +50,5 @@ gem 'bootstrap-sass'
 gem 'devise'
 gem 'figaro'
 gem 'faker'
+gem 'chartkick'
+gem 'groupdate'

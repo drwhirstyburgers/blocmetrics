@@ -1,15 +1,14 @@
 <h1><%= @registered_application.app_name %></h1>
-<h5>URL: <%= @registered_application.registration %><h5>
+<h5>URL: <%= link_to @registered_application.registration %><h5>
 
-  <div class="col-md-4">
-    <% @events.each do |name, events| %>
-    <div>
-      <%= name %> <span class="badge"><%= events.count %></span>
-    </div>
-    <% end %>
-  </div>
-
-  <div class="col-md-8">
+  <div class="pull-right">
     <%= link_to "Edit", edit_registered_application_path(@registered_application), class: 'btn btn-success' %>
     <%= link_to "Remove Application", @registered_application, method: :delete, class: 'btn btn-danger', data: {confirm: 'Are you sure you want to delete this application?'} %>
+  </div>
+
+  <div class="col-md-4">
+     <%= pie_chart @registered_application.events.group(:event_name).count %>
+  </div>
+  <div class="col-md-8">
+    <%= line_chart @registered_application.events.group_by_day(:created_at).count %>
   </div>
