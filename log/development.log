@@ -6856,3 +6856,633 @@ Processing by RegisteredApplicationsController#show as HTML
 Completed 200 OK in 24ms (Views: 20.8ms | ActiveRecord: 0.8ms)
 
 
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dangelo_pfannerstill"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "frederic.bosco@stamm.biz"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "confirmed_at", "created_at", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "frederic.bosco@stamm.biz"], ["encrypted_password", "$2a$11$wMpYUwTlOZ.hA6cWM0zumu9cxMhbxYoBAWyZuth/FSzOEGO.dnOjm"], ["confirmed_at", "2018-07-19 19:32:19.830862"], ["created_at", "2018-07-19 19:32:19.951626"], ["updated_at", "2018-07-19 19:32:19.951626"], ["username", "dangelo_pfannerstill"]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "marguerite"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "lonie@rueldurgan.biz"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "confirmed_at", "created_at", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "lonie@rueldurgan.biz"], ["encrypted_password", "$2a$11$0Xtm7KwlPm0nRlgnKeccXesItRcApc.kM1xvfJln/QRhxPqdTAqYC"], ["confirmed_at", "2018-07-19 19:32:19.955758"], ["created_at", "2018-07-19 19:32:20.063438"], ["updated_at", "2018-07-19 19:32:20.063438"], ["username", "marguerite"]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "cordie.kautzer"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jayson_grady@dickinson.net"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "confirmed_at", "created_at", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "jayson_grady@dickinson.net"], ["encrypted_password", "$2a$11$8Elb2hvDGTqw9rqs4O0Gy.BwJM7WRK3e/6J8yyctZFgMyzcAxIrma"], ["confirmed_at", "2018-07-19 19:32:20.068008"], ["created_at", "2018-07-19 19:32:20.174545"], ["updated_at", "2018-07-19 19:32:20.174545"], ["username", "cordie.kautzer"]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "annabelle"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "elna.bernier@ziemann.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "confirmed_at", "created_at", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "elna.bernier@ziemann.com"], ["encrypted_password", "$2a$11$ruOV5NDVIJDeKqkCtbRWeO5n2G/JQ2oUPWT1kpsoGQAh/n8zFyZVy"], ["confirmed_at", "2018-07-19 19:32:20.178500"], ["created_at", "2018-07-19 19:32:20.285660"], ["updated_at", "2018-07-19 19:32:20.285660"], ["username", "annabelle"]]
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "edwardo.kuhic"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "randi@bernierwindler.net"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "confirmed_at", "created_at", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "randi@bernierwindler.net"], ["encrypted_password", "$2a$11$wljhZEfiuPyo/U7FSTTeb.4blMq4W1kYp511qayjUYq5mGH/K7S/u"], ["confirmed_at", "2018-07-19 19:32:20.290473"], ["created_at", "2018-07-19 19:32:20.398122"], ["updated_at", "2018-07-19 19:32:20.398122"], ["username", "edwardo.kuhic"]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ardella"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "yazmin.conroy@hintz.co"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "confirmed_at", "created_at", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "yazmin.conroy@hintz.co"], ["encrypted_password", "$2a$11$iEDv7GNOgoykPJC2e5hsP.7N5PY3g/L3hAnqODiA8G88Wvyo5elBm"], ["confirmed_at", "2018-07-19 19:32:20.402380"], ["created_at", "2018-07-19 19:32:20.510888"], ["updated_at", "2018-07-19 19:32:20.510888"], ["username", "ardella"]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "chyna"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "torrey_batz@homenick.name"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "confirmed_at", "created_at", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "torrey_batz@homenick.name"], ["encrypted_password", "$2a$11$LFUryu7PYruSyiIAph8tjeodY1TQGKqWKFUvg44a649MdjeciXmKu"], ["confirmed_at", "2018-07-19 19:32:20.514813"], ["created_at", "2018-07-19 19:32:20.624064"], ["updated_at", "2018-07-19 19:32:20.624064"], ["username", "chyna"]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "kaci_beahan"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "candelario_waters@strosin.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "confirmed_at", "created_at", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "candelario_waters@strosin.com"], ["encrypted_password", "$2a$11$NA227MFmiyoAQ08SrNnxP.fUgN3MBjCBCb3i4iAlbLkZ5jC9afY4q"], ["confirmed_at", "2018-07-19 19:32:20.628584"], ["created_at", "2018-07-19 19:32:20.736291"], ["updated_at", "2018-07-19 19:32:20.736291"], ["username", "kaci_beahan"]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "merle"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "caandre@herzogferry.co"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "confirmed_at", "created_at", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "caandre@herzogferry.co"], ["encrypted_password", "$2a$11$ejUl1dtVRUSSITvic8pJ8ehu9c77qBTX3XGkd3qMTHuhvIsi7MLU6"], ["confirmed_at", "2018-07-19 19:32:20.740288"], ["created_at", "2018-07-19 19:32:20.849022"], ["updated_at", "2018-07-19 19:32:20.849022"], ["username", "merle"]]
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "lucie"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "antoinette@cummings.biz"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "confirmed_at", "created_at", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "antoinette@cummings.biz"], ["encrypted_password", "$2a$11$vJyw8KMOeeh52rh6UqT6rumodOgvnmjYqK/HxLWr2tQ3mbdJ48J3i"], ["confirmed_at", "2018-07-19 19:32:20.854088"], ["created_at", "2018-07-19 19:32:20.962366"], ["updated_at", "2018-07-19 19:32:20.962366"], ["username", "lucie"]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "registered_applications" ("registration", "app_name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration", "http://quitzon.co/kennedy"], ["app_name", "Trippledex"], ["user_id", 19], ["created_at", "2018-07-19 19:32:20.979823"], ["updated_at", "2018-07-19 19:32:20.979823"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "registered_applications" ("registration", "app_name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration", "http://denesikjohns.com/heloise"], ["app_name", "Flowdesk"], ["user_id", 25], ["created_at", "2018-07-19 19:32:20.983317"], ["updated_at", "2018-07-19 19:32:20.983317"]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "registered_applications" ("registration", "app_name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration", "http://gleichner.info/rowland_weber"], ["app_name", "Biodex"], ["user_id", 24], ["created_at", "2018-07-19 19:32:20.987562"], ["updated_at", "2018-07-19 19:32:20.987562"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "registered_applications" ("registration", "app_name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration", "http://luettgen.com/elisa"], ["app_name", "Stringtough"], ["user_id", 23], ["created_at", "2018-07-19 19:32:20.991866"], ["updated_at", "2018-07-19 19:32:20.991866"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "registered_applications" ("registration", "app_name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration", "http://conn.org/ebba"], ["app_name", "Overhold"], ["user_id", 7], ["created_at", "2018-07-19 19:32:20.996137"], ["updated_at", "2018-07-19 19:32:20.996137"]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "registered_applications" ("registration", "app_name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration", "http://kunzehagenes.net/shania.keler"], ["app_name", "Asoka"], ["user_id", 10], ["created_at", "2018-07-19 19:32:20.999529"], ["updated_at", "2018-07-19 19:32:20.999529"]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "registered_applications" ("registration", "app_name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration", "http://rauberge.net/angus"], ["app_name", "Aerified"], ["user_id", 20], ["created_at", "2018-07-19 19:32:21.004785"], ["updated_at", "2018-07-19 19:32:21.004785"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "registered_applications" ("registration", "app_name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration", "http://pfannerstill.io/heloise.sporer"], ["app_name", "Home Ing"], ["user_id", 22], ["created_at", "2018-07-19 19:32:21.008879"], ["updated_at", "2018-07-19 19:32:21.008879"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "registered_applications" ("registration", "app_name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration", "http://walker.io/barry"], ["app_name", "Viva"], ["user_id", 28], ["created_at", "2018-07-19 19:32:21.012410"], ["updated_at", "2018-07-19 19:32:21.012410"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "registered_applications" ("registration", "app_name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration", "http://ullrich.net/junior"], ["app_name", "Duobam"], ["user_id", 29], ["created_at", "2018-07-19 19:32:21.015988"], ["updated_at", "2018-07-19 19:32:21.015988"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "registered_applications" ("registration", "app_name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration", "http://mckenzie.co/percival.lowe"], ["app_name", "Rank"], ["user_id", 24], ["created_at", "2018-07-19 19:32:21.019496"], ["updated_at", "2018-07-19 19:32:21.019496"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "registered_applications" ("registration", "app_name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration", "http://feilzboncak.co/brandt"], ["app_name", "Vagram"], ["user_id", 26], ["created_at", "2018-07-19 19:32:21.022375"], ["updated_at", "2018-07-19 19:32:21.022375"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "registered_applications" ("registration", "app_name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration", "http://goodwinward.com/karolann.greenholt"], ["app_name", "Stringtough"], ["user_id", 27], ["created_at", "2018-07-19 19:32:21.026852"], ["updated_at", "2018-07-19 19:32:21.026852"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "registered_applications" ("registration", "app_name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration", "http://hermann.org/dovie.smitham"], ["app_name", "Kanlam"], ["user_id", 20], ["created_at", "2018-07-19 19:32:21.031339"], ["updated_at", "2018-07-19 19:32:21.031339"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "registered_applications" ("registration", "app_name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration", "http://nienowgreen.org/erika"], ["app_name", "Cardify"], ["user_id", 13], ["created_at", "2018-07-19 19:32:21.034165"], ["updated_at", "2018-07-19 19:32:21.034165"]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "registered_applications" ("registration", "app_name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration", "http://haleylehner.biz/milford"], ["app_name", "Flexidy"], ["user_id", 6], ["created_at", "2018-07-19 19:32:21.037446"], ["updated_at", "2018-07-19 19:32:21.037446"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "registered_applications" ("registration", "app_name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration", "http://nitzsche.name/maxime_hyatt"], ["app_name", "Cardguard"], ["user_id", 28], ["created_at", "2018-07-19 19:32:21.042196"], ["updated_at", "2018-07-19 19:32:21.042196"]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "registered_applications" ("registration", "app_name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration", "http://nienow.org/laria"], ["app_name", "Tampflex"], ["user_id", 15], ["created_at", "2018-07-19 19:32:21.047986"], ["updated_at", "2018-07-19 19:32:21.047986"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "registered_applications" ("registration", "app_name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration", "http://fritsch.net/dusty"], ["app_name", "Y-find"], ["user_id", 29], ["created_at", "2018-07-19 19:32:21.051334"], ["updated_at", "2018-07-19 19:32:21.051334"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "registered_applications" ("registration", "app_name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration", "http://carroll.co/marquise"], ["app_name", "Tres-Zap"], ["user_id", 15], ["created_at", "2018-07-19 19:32:21.054946"], ["updated_at", "2018-07-19 19:32:21.054946"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "registered_applications" ("registration", "app_name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration", "http://kelersawayn.net/nick_hermiston"], ["app_name", "Daltfresh"], ["user_id", 17], ["created_at", "2018-07-19 19:32:21.059670"], ["updated_at", "2018-07-19 19:32:21.059670"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "registered_applications" ("registration", "app_name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration", "http://beer.org/lamar.orn"], ["app_name", "Sonair"], ["user_id", 10], ["created_at", "2018-07-19 19:32:21.062811"], ["updated_at", "2018-07-19 19:32:21.062811"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "registered_applications" ("registration", "app_name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration", "http://jacobs.com/stacey"], ["app_name", "Job"], ["user_id", 6], ["created_at", "2018-07-19 19:32:21.066269"], ["updated_at", "2018-07-19 19:32:21.066269"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "registered_applications" ("registration", "app_name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration", "http://corkery.io/caden.lynch"], ["app_name", "Zontrax"], ["user_id", 19], ["created_at", "2018-07-19 19:32:21.070634"], ["updated_at", "2018-07-19 19:32:21.070634"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "registered_applications" ("registration", "app_name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration", "http://feest.info/gretchen"], ["app_name", "Lotlux"], ["user_id", 30], ["created_at", "2018-07-19 19:32:21.074541"], ["updated_at", "2018-07-19 19:32:21.074541"]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "registered_applications" ("registration", "app_name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration", "http://fay.com/daryl"], ["app_name", "Toughjoyfax"], ["user_id", 22], ["created_at", "2018-07-19 19:32:21.079035"], ["updated_at", "2018-07-19 19:32:21.079035"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "registered_applications" ("registration", "app_name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration", "http://goyette.io/anais_heidenreich"], ["app_name", "Vagram"], ["user_id", 20], ["created_at", "2018-07-19 19:32:21.082505"], ["updated_at", "2018-07-19 19:32:21.082505"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "registered_applications" ("registration", "app_name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration", "http://reynolds.info/joana"], ["app_name", "Voltsillam"], ["user_id", 23], ["created_at", "2018-07-19 19:32:21.085826"], ["updated_at", "2018-07-19 19:32:21.085826"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "registered_applications" ("registration", "app_name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration", "http://morar.io/malinda_kuhic"], ["app_name", "Domainer"], ["user_id", 15], ["created_at", "2018-07-19 19:32:21.089368"], ["updated_at", "2018-07-19 19:32:21.089368"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "registered_applications" ("registration", "app_name", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration", "http://hoppe.net/rollin"], ["app_name", "Transcof"], ["user_id", 18], ["created_at", "2018-07-19 19:32:21.092514"], ["updated_at", "2018-07-19 19:32:21.092514"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mRegisteredApplication Load (0.3ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "connect"], ["registered_application_id", 71], ["created_at", "1987-04-27 21:10:01.161489"], ["updated_at", "2018-07-19 19:32:21.101876"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "bypass"], ["registered_application_id", 92], ["created_at", "2000-02-10 12:40:33.160222"], ["updated_at", "2018-07-19 19:32:21.105116"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "reboot"], ["registered_application_id", 56], ["created_at", "2013-07-25 04:02:10.168718"], ["updated_at", "2018-07-19 19:32:21.109402"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "parse"], ["registered_application_id", 26], ["created_at", "1980-08-26 11:12:31.158968"], ["updated_at", "2018-07-19 19:32:21.113157"]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "compress"], ["registered_application_id", 85], ["created_at", "1977-07-16 20:32:35.112740"], ["updated_at", "2018-07-19 19:32:21.116589"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "parse"], ["registered_application_id", 77], ["created_at", "2008-10-14 12:00:46.163421"], ["updated_at", "2018-07-19 19:32:21.119665"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "quantify"], ["registered_application_id", 64], ["created_at", "2011-07-29 16:08:55.530652"], ["updated_at", "2018-07-19 19:32:21.123284"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "program"], ["registered_application_id", 87], ["created_at", "2011-03-16 15:30:48.615428"], ["updated_at", "2018-07-19 19:32:21.127059"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "program"], ["registered_application_id", 10], ["created_at", "1970-08-09 16:18:46.283651"], ["updated_at", "2018-07-19 19:32:21.129853"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "back up"], ["registered_application_id", 17], ["created_at", "2008-12-11 01:42:11.373449"], ["updated_at", "2018-07-19 19:32:21.133463"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "compress"], ["registered_application_id", 64], ["created_at", "2009-04-16 21:49:27.286013"], ["updated_at", "2018-07-19 19:32:21.136429"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "bypass"], ["registered_application_id", 65], ["created_at", "2004-04-13 08:11:00.531518"], ["updated_at", "2018-07-19 19:32:21.140031"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "generate"], ["registered_application_id", 46], ["created_at", "1970-11-27 02:44:27.201214"], ["updated_at", "2018-07-19 19:32:21.143563"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "bypass"], ["registered_application_id", 93], ["created_at", "1974-05-17 10:39:35.146237"], ["updated_at", "2018-07-19 19:32:21.147316"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "reboot"], ["registered_application_id", 64], ["created_at", "1991-11-26 20:39:37.627887"], ["updated_at", "2018-07-19 19:32:21.151517"]]
+  [1m[35m (5.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "transmit"], ["registered_application_id", 21], ["created_at", "1971-03-24 18:23:07.894377"], ["updated_at", "2018-07-19 19:32:21.158421"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "reboot"], ["registered_application_id", 96], ["created_at", "2013-04-08 19:36:46.264216"], ["updated_at", "2018-07-19 19:32:21.162028"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "compress"], ["registered_application_id", 64], ["created_at", "1982-12-17 07:30:41.191736"], ["updated_at", "2018-07-19 19:32:21.165361"]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "program"], ["registered_application_id", 17], ["created_at", "1974-05-16 04:18:34.762465"], ["updated_at", "2018-07-19 19:32:21.168653"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "bypass"], ["registered_application_id", 19], ["created_at", "1970-06-22 07:05:06.907195"], ["updated_at", "2018-07-19 19:32:21.171477"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "compress"], ["registered_application_id", 44], ["created_at", "2000-08-23 06:22:37.251363"], ["updated_at", "2018-07-19 19:32:21.175265"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "connect"], ["registered_application_id", 92], ["created_at", "1971-01-31 12:02:11.883530"], ["updated_at", "2018-07-19 19:32:21.179840"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "reboot"], ["registered_application_id", 18], ["created_at", "2016-01-11 06:04:53.469004"], ["updated_at", "2018-07-19 19:32:21.183093"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "override"], ["registered_application_id", 78], ["created_at", "1998-02-28 02:55:50.909454"], ["updated_at", "2018-07-19 19:32:21.185774"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "bypass"], ["registered_application_id", 94], ["created_at", "2016-12-25 18:01:23.359032"], ["updated_at", "2018-07-19 19:32:21.189267"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "reboot"], ["registered_application_id", 64], ["created_at", "2017-08-31 09:43:07.794870"], ["updated_at", "2018-07-19 19:32:21.192467"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "bypass"], ["registered_application_id", 33], ["created_at", "2005-01-02 10:00:02.295268"], ["updated_at", "2018-07-19 19:32:21.196324"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "override"], ["registered_application_id", 55], ["created_at", "1989-01-11 23:51:06.123990"], ["updated_at", "2018-07-19 19:32:21.199304"]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "generate"], ["registered_application_id", 96], ["created_at", "1995-02-15 23:09:12.557217"], ["updated_at", "2018-07-19 19:32:21.202919"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "connect"], ["registered_application_id", 72], ["created_at", "1991-05-06 04:01:44.155215"], ["updated_at", "2018-07-19 19:32:21.207074"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "hack"], ["registered_application_id", 87], ["created_at", "1995-10-07 19:18:42.228851"], ["updated_at", "2018-07-19 19:32:21.209903"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "generate"], ["registered_application_id", 97], ["created_at", "2010-06-16 08:21:24.954432"], ["updated_at", "2018-07-19 19:32:21.213395"]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "hack"], ["registered_application_id", 35], ["created_at", "1985-07-06 05:14:44.668431"], ["updated_at", "2018-07-19 19:32:21.217030"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "generate"], ["registered_application_id", 75], ["created_at", "2009-04-08 11:25:51.170836"], ["updated_at", "2018-07-19 19:32:21.220179"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "program"], ["registered_application_id", 82], ["created_at", "2001-06-06 00:50:50.629411"], ["updated_at", "2018-07-19 19:32:21.223645"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "program"], ["registered_application_id", 99], ["created_at", "1971-02-03 06:07:15.606284"], ["updated_at", "2018-07-19 19:32:21.226875"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "hack"], ["registered_application_id", 26], ["created_at", "1987-10-25 16:15:50.653731"], ["updated_at", "2018-07-19 19:32:21.230142"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "hack"], ["registered_application_id", 78], ["created_at", "2007-02-02 14:22:39.461897"], ["updated_at", "2018-07-19 19:32:21.233005"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "program"], ["registered_application_id", 61], ["created_at", "1973-01-13 22:16:08.157794"], ["updated_at", "2018-07-19 19:32:21.235605"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "reboot"], ["registered_application_id", 39], ["created_at", "2013-12-25 12:30:26.742053"], ["updated_at", "2018-07-19 19:32:21.239853"]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "program"], ["registered_application_id", 26], ["created_at", "1975-06-05 11:14:26.406055"], ["updated_at", "2018-07-19 19:32:21.244641"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "compress"], ["registered_application_id", 82], ["created_at", "1976-10-29 13:19:35.124709"], ["updated_at", "2018-07-19 19:32:21.249148"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "back up"], ["registered_application_id", 48], ["created_at", "1998-02-10 16:02:09.250444"], ["updated_at", "2018-07-19 19:32:21.252245"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "compress"], ["registered_application_id", 36], ["created_at", "2005-06-20 00:28:28.476681"], ["updated_at", "2018-07-19 19:32:21.255790"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "override"], ["registered_application_id", 27], ["created_at", "2004-03-27 05:50:29.394682"], ["updated_at", "2018-07-19 19:32:21.258654"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "hack"], ["registered_application_id", 75], ["created_at", "1970-10-29 03:38:48.801929"], ["updated_at", "2018-07-19 19:32:21.261791"]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "transmit"], ["registered_application_id", 54], ["created_at", "1972-03-13 07:27:09.495356"], ["updated_at", "2018-07-19 19:32:21.265663"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "input"], ["registered_application_id", 88], ["created_at", "1974-05-11 11:56:59.948930"], ["updated_at", "2018-07-19 19:32:21.270431"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "calculate"], ["registered_application_id", 20], ["created_at", "1986-05-25 19:05:08.686872"], ["updated_at", "2018-07-19 19:32:21.273628"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "compress"], ["registered_application_id", 37], ["created_at", "1991-01-11 16:07:53.191821"], ["updated_at", "2018-07-19 19:32:21.278729"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "navigate"], ["registered_application_id", 98], ["created_at", "2008-03-19 21:30:17.358690"], ["updated_at", "2018-07-19 19:32:21.281813"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "calculate"], ["registered_application_id", 10], ["created_at", "1977-06-04 02:27:46.947564"], ["updated_at", "2018-07-19 19:32:21.285406"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "transmit"], ["registered_application_id", 96], ["created_at", "1996-03-04 02:04:15.782937"], ["updated_at", "2018-07-19 19:32:21.289700"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "program"], ["registered_application_id", 54], ["created_at", "2000-02-12 14:36:24.213216"], ["updated_at", "2018-07-19 19:32:21.292583"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "program"], ["registered_application_id", 73], ["created_at", "1982-10-13 04:44:37.040067"], ["updated_at", "2018-07-19 19:32:21.296347"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "index"], ["registered_application_id", 34], ["created_at", "2018-01-01 00:35:11.968387"], ["updated_at", "2018-07-19 19:32:21.300101"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "input"], ["registered_application_id", 21], ["created_at", "2017-03-23 06:27:47.894673"], ["updated_at", "2018-07-19 19:32:21.306034"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "parse"], ["registered_application_id", 82], ["created_at", "1980-04-10 07:33:10.670746"], ["updated_at", "2018-07-19 19:32:21.309821"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "parse"], ["registered_application_id", 95], ["created_at", "2009-04-24 19:36:21.015672"], ["updated_at", "2018-07-19 19:32:21.313612"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "quantify"], ["registered_application_id", 82], ["created_at", "1982-09-26 21:48:36.491311"], ["updated_at", "2018-07-19 19:32:21.317714"]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "reboot"], ["registered_application_id", 24], ["created_at", "1975-10-13 12:53:28.578801"], ["updated_at", "2018-07-19 19:32:21.321672"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "navigate"], ["registered_application_id", 70], ["created_at", "2008-12-07 21:45:12.089126"], ["updated_at", "2018-07-19 19:32:21.328655"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "input"], ["registered_application_id", 61], ["created_at", "2001-10-01 09:26:40.295267"], ["updated_at", "2018-07-19 19:32:21.332872"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "parse"], ["registered_application_id", 23], ["created_at", "2002-04-30 23:17:16.362838"], ["updated_at", "2018-07-19 19:32:21.336381"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "calculate"], ["registered_application_id", 71], ["created_at", "1991-02-08 05:32:05.611794"], ["updated_at", "2018-07-19 19:32:21.340902"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "compress"], ["registered_application_id", 29], ["created_at", "1983-02-23 06:33:57.089078"], ["updated_at", "2018-07-19 19:32:21.344811"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "generate"], ["registered_application_id", 8], ["created_at", "1977-01-28 16:52:29.841201"], ["updated_at", "2018-07-19 19:32:21.348413"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "compress"], ["registered_application_id", 21], ["created_at", "1988-12-03 09:40:41.151568"], ["updated_at", "2018-07-19 19:32:21.351755"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "compress"], ["registered_application_id", 83], ["created_at", "2015-08-23 20:23:53.095055"], ["updated_at", "2018-07-19 19:32:21.355255"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "copy"], ["registered_application_id", 96], ["created_at", "2017-03-27 00:35:16.578466"], ["updated_at", "2018-07-19 19:32:21.359268"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "quantify"], ["registered_application_id", 43], ["created_at", "2003-07-16 17:42:37.416738"], ["updated_at", "2018-07-19 19:32:21.362111"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "copy"], ["registered_application_id", 84], ["created_at", "1984-08-07 19:55:35.739128"], ["updated_at", "2018-07-19 19:32:21.365286"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "bypass"], ["registered_application_id", 95], ["created_at", "2003-09-25 20:57:27.460440"], ["updated_at", "2018-07-19 19:32:21.369836"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "copy"], ["registered_application_id", 39], ["created_at", "1996-05-11 06:28:19.746341"], ["updated_at", "2018-07-19 19:32:21.373548"]]
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "reboot"], ["registered_application_id", 92], ["created_at", "1974-01-15 01:37:38.155664"], ["updated_at", "2018-07-19 19:32:21.381013"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "connect"], ["registered_application_id", 43], ["created_at", "1976-07-04 01:16:57.367386"], ["updated_at", "2018-07-19 19:32:21.384593"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "synthesize"], ["registered_application_id", 7], ["created_at", "1971-08-24 20:22:43.899346"], ["updated_at", "2018-07-19 19:32:21.388027"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "program"], ["registered_application_id", 40], ["created_at", "2000-07-09 05:21:58.957960"], ["updated_at", "2018-07-19 19:32:21.391424"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "quantify"], ["registered_application_id", 46], ["created_at", "2016-09-08 17:07:19.206469"], ["updated_at", "2018-07-19 19:32:21.396449"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "compress"], ["registered_application_id", 60], ["created_at", "2017-09-11 01:52:28.639647"], ["updated_at", "2018-07-19 19:32:21.400165"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "connect"], ["registered_application_id", 22], ["created_at", "1973-04-08 13:07:08.300776"], ["updated_at", "2018-07-19 19:32:21.403835"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "calculate"], ["registered_application_id", 52], ["created_at", "1980-04-28 11:20:12.188126"], ["updated_at", "2018-07-19 19:32:21.407672"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "reboot"], ["registered_application_id", 45], ["created_at", "1971-02-18 06:04:01.220495"], ["updated_at", "2018-07-19 19:32:21.411603"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "index"], ["registered_application_id", 61], ["created_at", "2016-09-12 00:44:57.333903"], ["updated_at", "2018-07-19 19:32:21.414848"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "quantify"], ["registered_application_id", 38], ["created_at", "2003-11-01 18:28:16.465939"], ["updated_at", "2018-07-19 19:32:21.417768"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "parse"], ["registered_application_id", 35], ["created_at", "1982-04-01 22:39:58.343743"], ["updated_at", "2018-07-19 19:32:21.422170"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "connect"], ["registered_application_id", 22], ["created_at", "2012-03-27 00:11:28.543677"], ["updated_at", "2018-07-19 19:32:21.426185"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "generate"], ["registered_application_id", 62], ["created_at", "2010-11-30 03:47:22.718805"], ["updated_at", "2018-07-19 19:32:21.429529"]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "reboot"], ["registered_application_id", 40], ["created_at", "2015-04-23 19:35:00.852866"], ["updated_at", "2018-07-19 19:32:21.433738"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "hack"], ["registered_application_id", 53], ["created_at", "1990-12-31 12:45:39.522158"], ["updated_at", "2018-07-19 19:32:21.437702"]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "bypass"], ["registered_application_id", 55], ["created_at", "2008-03-18 13:25:55.781636"], ["updated_at", "2018-07-19 19:32:21.442381"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "generate"], ["registered_application_id", 43], ["created_at", "1975-05-11 23:45:34.841359"], ["updated_at", "2018-07-19 19:32:21.445668"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "back up"], ["registered_application_id", 97], ["created_at", "1982-05-01 23:06:51.651898"], ["updated_at", "2018-07-19 19:32:21.449362"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "back up"], ["registered_application_id", 39], ["created_at", "1980-05-11 14:34:25.276037"], ["updated_at", "2018-07-19 19:32:21.452767"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "quantify"], ["registered_application_id", 10], ["created_at", "2015-12-28 17:12:01.455805"], ["updated_at", "2018-07-19 19:32:21.456264"]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "index"], ["registered_application_id", 43], ["created_at", "1999-08-20 13:09:54.495188"], ["updated_at", "2018-07-19 19:32:21.461417"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "calculate"], ["registered_application_id", 34], ["created_at", "2017-08-12 17:02:50.999150"], ["updated_at", "2018-07-19 19:32:21.464658"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "generate"], ["registered_application_id", 14], ["created_at", "2001-04-16 12:00:33.139878"], ["updated_at", "2018-07-19 19:32:21.468525"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "quantify"], ["registered_application_id", 58], ["created_at", "2007-02-17 04:22:23.657649"], ["updated_at", "2018-07-19 19:32:21.472645"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "override"], ["registered_application_id", 50], ["created_at", "2007-03-10 04:02:59.946131"], ["updated_at", "2018-07-19 19:32:21.476636"]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "reboot"], ["registered_application_id", 75], ["created_at", "1980-06-15 14:18:48.581969"], ["updated_at", "2018-07-19 19:32:21.480318"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "connect"], ["registered_application_id", 86], ["created_at", "1978-05-02 21:06:41.264682"], ["updated_at", "2018-07-19 19:32:21.483718"]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "navigate"], ["registered_application_id", 50], ["created_at", "1996-09-02 04:20:22.448391"], ["updated_at", "2018-07-19 19:32:21.490202"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "index"], ["registered_application_id", 12], ["created_at", "2010-05-23 07:53:35.808390"], ["updated_at", "2018-07-19 19:32:21.495100"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "parse"], ["registered_application_id", 51], ["created_at", "1997-03-02 02:55:27.824538"], ["updated_at", "2018-07-19 19:32:21.498706"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "navigate"], ["registered_application_id", 38], ["created_at", "2014-01-13 01:20:50.661637"], ["updated_at", "2018-07-19 19:32:21.502230"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "connect"], ["registered_application_id", 95], ["created_at", "2005-11-07 06:46:14.100351"], ["updated_at", "2018-07-19 19:32:21.505273"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "compress"], ["registered_application_id", 18], ["created_at", "1978-05-16 05:47:48.575421"], ["updated_at", "2018-07-19 19:32:21.509582"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "input"], ["registered_application_id", 86], ["created_at", "1983-06-07 16:42:38.930590"], ["updated_at", "2018-07-19 19:32:21.513163"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "program"], ["registered_application_id", 76], ["created_at", "2009-07-24 21:03:13.239578"], ["updated_at", "2018-07-19 19:32:21.516381"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "index"], ["registered_application_id", 99], ["created_at", "2010-10-29 01:31:30.061824"], ["updated_at", "2018-07-19 19:32:21.520435"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "index"], ["registered_application_id", 29], ["created_at", "1996-06-25 10:43:01.578268"], ["updated_at", "2018-07-19 19:32:21.524160"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "override"], ["registered_application_id", 26], ["created_at", "1999-07-08 12:17:52.606255"], ["updated_at", "2018-07-19 19:32:21.530243"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "override"], ["registered_application_id", 54], ["created_at", "2017-09-27 17:12:15.991572"], ["updated_at", "2018-07-19 19:32:21.533275"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "input"], ["registered_application_id", 95], ["created_at", "2007-05-27 02:10:11.725043"], ["updated_at", "2018-07-19 19:32:21.536294"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "override"], ["registered_application_id", 87], ["created_at", "1994-02-20 13:59:08.686534"], ["updated_at", "2018-07-19 19:32:21.539499"]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "input"], ["registered_application_id", 40], ["created_at", "1980-09-03 03:33:08.486760"], ["updated_at", "2018-07-19 19:32:21.545506"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "navigate"], ["registered_application_id", 44], ["created_at", "1998-03-29 02:42:31.542525"], ["updated_at", "2018-07-19 19:32:21.548985"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "transmit"], ["registered_application_id", 12], ["created_at", "1999-11-20 17:49:50.101746"], ["updated_at", "2018-07-19 19:32:21.551947"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "bypass"], ["registered_application_id", 33], ["created_at", "2016-01-09 06:01:18.564332"], ["updated_at", "2018-07-19 19:32:21.555207"]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "navigate"], ["registered_application_id", 36], ["created_at", "1975-12-08 05:49:23.939226"], ["updated_at", "2018-07-19 19:32:21.560705"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "compress"], ["registered_application_id", 51], ["created_at", "1972-02-12 19:30:56.860846"], ["updated_at", "2018-07-19 19:32:21.564425"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "transmit"], ["registered_application_id", 15], ["created_at", "2014-09-19 14:26:40.697463"], ["updated_at", "2018-07-19 19:32:21.567465"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "hack"], ["registered_application_id", 65], ["created_at", "2002-01-02 22:06:06.074338"], ["updated_at", "2018-07-19 19:32:21.572791"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "navigate"], ["registered_application_id", 98], ["created_at", "1981-02-13 23:23:32.817703"], ["updated_at", "2018-07-19 19:32:21.576137"]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "calculate"], ["registered_application_id", 9], ["created_at", "2007-01-12 09:52:51.161578"], ["updated_at", "2018-07-19 19:32:21.579893"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "navigate"], ["registered_application_id", 98], ["created_at", "2006-12-31 01:36:33.575507"], ["updated_at", "2018-07-19 19:32:21.583376"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "copy"], ["registered_application_id", 77], ["created_at", "1988-07-31 20:09:42.119071"], ["updated_at", "2018-07-19 19:32:21.586103"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "program"], ["registered_application_id", 61], ["created_at", "2005-08-02 06:23:42.678164"], ["updated_at", "2018-07-19 19:32:21.588910"]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "hack"], ["registered_application_id", 84], ["created_at", "1976-10-25 05:43:15.665061"], ["updated_at", "2018-07-19 19:32:21.595429"]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "transmit"], ["registered_application_id", 30], ["created_at", "1992-10-22 18:52:52.919855"], ["updated_at", "2018-07-19 19:32:21.599597"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "input"], ["registered_application_id", 75], ["created_at", "1994-07-16 18:46:13.389766"], ["updated_at", "2018-07-19 19:32:21.603390"]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "override"], ["registered_application_id", 11], ["created_at", "2011-03-31 13:57:48.061840"], ["updated_at", "2018-07-19 19:32:21.606952"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "bypass"], ["registered_application_id", 42], ["created_at", "2017-10-23 19:43:38.506260"], ["updated_at", "2018-07-19 19:32:21.610555"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "copy"], ["registered_application_id", 39], ["created_at", "1991-12-20 23:30:50.302467"], ["updated_at", "2018-07-19 19:32:21.613522"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "transmit"], ["registered_application_id", 81], ["created_at", "2001-03-20 15:34:25.148236"], ["updated_at", "2018-07-19 19:32:21.616791"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "calculate"], ["registered_application_id", 20], ["created_at", "2009-04-26 11:49:07.155182"], ["updated_at", "2018-07-19 19:32:21.619966"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "synthesize"], ["registered_application_id", 66], ["created_at", "1977-04-17 11:00:35.872337"], ["updated_at", "2018-07-19 19:32:21.622681"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "bypass"], ["registered_application_id", 61], ["created_at", "1985-01-08 06:58:17.252524"], ["updated_at", "2018-07-19 19:32:21.626897"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "generate"], ["registered_application_id", 69], ["created_at", "1978-01-23 02:06:34.853135"], ["updated_at", "2018-07-19 19:32:21.629879"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "program"], ["registered_application_id", 89], ["created_at", "2001-01-02 14:28:08.103326"], ["updated_at", "2018-07-19 19:32:21.633454"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "back up"], ["registered_application_id", 10], ["created_at", "2012-12-18 02:39:22.311021"], ["updated_at", "2018-07-19 19:32:21.636619"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "input"], ["registered_application_id", 14], ["created_at", "2016-03-15 14:50:13.492214"], ["updated_at", "2018-07-19 19:32:21.640882"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "synthesize"], ["registered_application_id", 97], ["created_at", "2003-12-08 19:36:59.134944"], ["updated_at", "2018-07-19 19:32:21.644484"]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "parse"], ["registered_application_id", 57], ["created_at", "2008-12-22 20:52:57.635089"], ["updated_at", "2018-07-19 19:32:21.647996"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "input"], ["registered_application_id", 94], ["created_at", "2000-09-01 14:16:57.480603"], ["updated_at", "2018-07-19 19:32:21.651571"]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "back up"], ["registered_application_id", 13], ["created_at", "1988-05-31 08:33:23.196357"], ["updated_at", "2018-07-19 19:32:21.655587"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "quantify"], ["registered_application_id", 80], ["created_at", "1974-05-29 07:08:49.836834"], ["updated_at", "2018-07-19 19:32:21.659590"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "copy"], ["registered_application_id", 8], ["created_at", "2012-05-15 04:40:40.562752"], ["updated_at", "2018-07-19 19:32:21.662923"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("event_name", "registered_application_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["event_name", "synthesize"], ["registered_application_id", 14], ["created_at", "1981-02-20 04:19:45.190262"], ["updated_at", "2018-07-19 19:32:21.666119"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/registered_applications" for 127.0.0.1 at 2018-07-19 15:32:30 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RegisteredApplicationsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering registered_applications/index.html.erb within layouts/application
+  [1m[36mRegisteredApplication Load (0.1ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered registered_applications/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 235ms (Views: 210.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/registered_applications/66" for 127.0.0.1 at 2018-07-19 15:32:32 -0400
+Processing by RegisteredApplicationsController#show as HTML
+  Parameters: {"id"=>"66"}
+  [1m[36mRegisteredApplication Load (0.2ms)[0m  [1m[34mSELECT  "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."id" = ? LIMIT ?[0m  [["id", 66], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 66]]
+  Rendering registered_applications/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 66]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 66]]
+  Rendered registered_applications/show.html.erb within layouts/application (877.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 909ms (Views: 896.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/registered_applications/35" for 127.0.0.1 at 2018-07-19 15:33:03 -0400
+Processing by RegisteredApplicationsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mRegisteredApplication Load (0.1ms)[0m  [1m[34mSELECT  "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 35]]
+  Rendering registered_applications/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 35]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 35]]
+  Rendered registered_applications/show.html.erb within layouts/application (776.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 798ms (Views: 795.4ms | ActiveRecord: 0.7ms)
+
+

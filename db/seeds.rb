@@ -22,6 +22,7 @@ applications = RegisteredApplication.all
 150.times do
   Event.create(
     registered_application: applications.sample,
-    event_name: Faker::Hacker.verb
+    event_name: Faker::Hacker.verb,
+    created_at: Time.at(rand * Time.now.to_i)
   )
 end
