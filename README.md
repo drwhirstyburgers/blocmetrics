@@ -26,7 +26,7 @@ For a user to track an event, all they have to do is add the snippet `blocmetric
 
 for example:
 
-```javascript
+```
 window.onload = function() {
   blocmetrics.report('name_of_event');
 };
