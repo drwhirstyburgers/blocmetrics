@@ -18,7 +18,7 @@ var blocmetrics = {
     };
 
     var _bm_request = new XMLHttpRequest();
-    _bm_request.open("POST", "http://mcgivern-blocmetrics.herokuapp.com/api/events", true);
+    _bm_request.open("POST", "https://davidsblocmetrics.herokuapp.com/api/events", true);
     _bm_request.setRequestHeader('Content-Type', 'application/json');
 
     _bm_request.onreadystatechange = function() {
