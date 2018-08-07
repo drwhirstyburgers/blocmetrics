@@ -7486,3 +7486,804 @@ Processing by RegisteredApplicationsController#show as HTML
 Completed 200 OK in 798ms (Views: 795.4ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/cable" for 127.0.0.1 at 2018-08-07 17:17:35 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-08-07 17:17:35 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Subscription class not found: "ChatRoomsChannel"
+Started GET "/" for 127.0.0.1 at 2018-08-07 17:17:40 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 202ms (Views: 194.7ms | ActiveRecord: 0.6ms)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-08-07 17:17:40 -0400
+Started GET "/registered_applications" for 127.0.0.1 at 2018-08-07 17:17:46 -0400
+Processing by RegisteredApplicationsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering registered_applications/index.html.erb within layouts/application
+  [1m[36mRegisteredApplication Load (0.1ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered registered_applications/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 35ms (Views: 24.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/registered_applications/new" for 127.0.0.1 at 2018-08-07 17:17:47 -0400
+Processing by RegisteredApplicationsController#new as HTML
+  Rendering registered_applications/new.html.erb within layouts/application
+  Rendered registered_applications/new.html.erb within layouts/application (362.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 380ms (Views: 376.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cable" for 127.0.0.1 at 2018-08-07 17:17:48 -0400
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-08-07 17:17:48 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Subscription class not found: "ChatRoomsChannel"
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 17:19:08 -0400
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/registered_applications" for 127.0.0.1 at 2018-08-07 17:19:49 -0400
+Processing by RegisteredApplicationsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering registered_applications/index.html.erb within layouts/application
+  [1m[36mRegisteredApplication Load (0.1ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered registered_applications/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 23ms (Views: 20.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/registered_applications/5" for 127.0.0.1 at 2018-08-07 17:19:50 -0400
+Processing by RegisteredApplicationsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mRegisteredApplication Load (0.2ms)[0m  [1m[34mSELECT  "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 5]]
+  Rendering registered_applications/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 5]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 5]]
+  Rendered registered_applications/show.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 30ms (Views: 17.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/registered_applications/35" for 127.0.0.1 at 2018-08-07 17:19:54 -0400
+Processing by RegisteredApplicationsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mRegisteredApplication Load (0.1ms)[0m  [1m[34mSELECT  "registered_applications".* FROM "registered_applications" WHERE "registered_applications"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 35]]
+  Rendering registered_applications/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 35]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 35]]
+  Rendered registered_applications/show.html.erb within layouts/application (773.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 794ms (Views: 791.2ms | ActiveRecord: 0.7ms)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-08-07 17:20:46 -0400
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 17:22:24 -0400
+Processing by WelcomeController#index as HTML
+Completed 500 Internal Server Error in 6ms
+
+
+  
+NoMethodError (undefined method `sample' for #<Class:0x00007f1221abe890>):
+  
+app/controllers/welcome_controller.rb:3:in `index'
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 17:23:14 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.2ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 35ms (Views: 26.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 17:27:20 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.2ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 72]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 72]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 72]]
+  Rendered welcome/index.html.erb within layouts/application (10.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 50ms (Views: 35.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 17:27:34 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.4ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 70]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 70]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 70]]
+  Rendered welcome/index.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 25ms (Views: 21.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 17:27:36 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.6ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 77]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 77]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 77]]
+  Rendered welcome/index.html.erb within layouts/application (437.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 458ms (Views: 453.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 17:27:40 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.4ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 57]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 57]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 57]]
+  Rendered welcome/index.html.erb within layouts/application (214.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 235ms (Views: 230.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 17:29:45 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.3ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 48]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 48]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 48]]
+  Rendered welcome/index.html.erb within layouts/application (505.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 525ms (Views: 521.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 17:30:28 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.4ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 86]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 86]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 86]]
+  Rendered welcome/index.html.erb within layouts/application (114.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 135ms (Views: 131.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 17:31:50 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.5ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 15]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 15]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 15]]
+  Rendered welcome/index.html.erb within layouts/application (84.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 104ms (Views: 99.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 17:35:13 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.4ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 17]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 17]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 17]]
+  Rendered welcome/index.html.erb within layouts/application (1000.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 1020ms (Views: 1016.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 17:42:08 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.3ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 34]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 34]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 34]]
+  Rendered welcome/index.html.erb within layouts/application (21.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 228ms (Views: 199.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 17:43:18 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.3ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 30]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 30]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 30]]
+  Rendered welcome/index.html.erb within layouts/application (594.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 615ms (Views: 611.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 17:43:39 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.4ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 48]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 48]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 48]]
+  Rendered welcome/index.html.erb within layouts/application (433.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 454ms (Views: 450.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 17:44:07 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.3ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 95]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 95]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 95]]
+  Rendered welcome/index.html.erb within layouts/application (118.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 138ms (Views: 134.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 17:44:24 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.5ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 71]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 71]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 71]]
+  Rendered welcome/index.html.erb within layouts/application (87.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 110ms (Views: 105.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 17:44:39 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.3ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 81]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 81]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 81]]
+  Rendered welcome/index.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 22ms (Views: 18.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 17:44:51 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.4ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 71]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 71]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 71]]
+  Rendered welcome/index.html.erb within layouts/application (84.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 105ms (Views: 101.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 17:45:04 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.5ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 39]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 39]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 39]]
+  Rendered welcome/index.html.erb within layouts/application (942.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 964ms (Views: 959.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 17:45:12 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.6ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 17]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 17]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 17]]
+  Rendered welcome/index.html.erb within layouts/application (981.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 1002ms (Views: 997.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 17:45:26 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.3ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 27]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 27]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 27]]
+  Rendered welcome/index.html.erb within layouts/application (319.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 339ms (Views: 335.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 17:45:40 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.4ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 31]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 31]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 31]]
+  Rendered welcome/index.html.erb within layouts/application (4.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 24ms (Views: 20.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 17:45:53 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.4ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 52]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 52]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 52]]
+  Rendered welcome/index.html.erb within layouts/application (921.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 952ms (Views: 948.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 17:46:14 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.3ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 15]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 15]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 15]]
+  Rendered welcome/index.html.erb within layouts/application (79.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 98ms (Views: 95.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 17:46:35 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.4ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 51]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 51]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 51]]
+  Rendered welcome/index.html.erb within layouts/application (585.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 607ms (Views: 602.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 17:46:51 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.5ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 94]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 94]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 94]]
+  Rendered welcome/index.html.erb within layouts/application (371.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 391ms (Views: 387.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 17:47:18 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.3ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 46]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 46]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 46]]
+  Rendered welcome/index.html.erb within layouts/application (1118.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 1137ms (Views: 1133.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 17:47:24 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.3ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 92]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 92]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 92]]
+  Rendered welcome/index.html.erb within layouts/application (637.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 656ms (Views: 652.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 17:47:38 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.5ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 11]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 11]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 11]]
+  Rendered welcome/index.html.erb within layouts/application (209.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 232ms (Views: 227.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 17:50:56 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.4ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 98]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 98]]
+  Rendered welcome/index.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 23ms (Views: 19.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 17:51:08 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.5ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 69]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 69]]
+  Rendered welcome/index.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 27ms (Views: 22.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 17:52:21 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.5ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 69]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 69]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 69]]
+  Rendered welcome/index.html.erb within layouts/application (879.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 901ms (Views: 896.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 17:52:39 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.3ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 29]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 29]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 29]]
+  Rendered welcome/index.html.erb within layouts/application (845.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 867ms (Views: 864.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 17:53:00 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.3ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 8]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 8]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 8]]
+  Rendered welcome/index.html.erb within layouts/application (903.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 931ms (Views: 927.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 17:53:25 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.5ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 87]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 87]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 87]]
+  Rendered welcome/index.html.erb within layouts/application (381.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 405ms (Views: 401.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 17:54:25 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.5ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 82]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 82]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 82]]
+  Rendered welcome/index.html.erb within layouts/application (554.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 582ms (Views: 577.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 17:54:48 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.3ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 80]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 80]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 80]]
+  Rendered welcome/index.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 22ms (Views: 18.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 17:54:57 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.7ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 52]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 52]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 52]]
+  Rendered welcome/index.html.erb within layouts/application (932.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 954ms (Views: 950.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 17:58:34 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.6ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 94]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 94]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 94]]
+  Rendered welcome/index.html.erb within layouts/application (357.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 377ms (Views: 373.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 17:59:28 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.4ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 57]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 57]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 57]]
+  Rendered welcome/index.html.erb within layouts/application (216.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 237ms (Views: 233.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 18:00:08 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.3ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 93]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 93]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 93]]
+  Rendered welcome/index.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 21ms (Views: 18.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 18:00:46 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.4ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 46]]
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.5ms)
+
+
+  
+SyntaxError (/home/david/Bloc/blocmetrics/app/views/welcome/index.html.erb:17: syntax error, unexpected '='
+..._user_registration_path, class="btn btn-primary" );@output_b...
+...                              ^
+/home/david/Bloc/blocmetrics/app/views/welcome/index.html.erb:26: syntax error, unexpected '='
+...", new_user_session_url, class="btn btn-primary" );@output_b...
+...                              ^):
+  
+app/views/welcome/index.html.erb:17: syntax error, unexpected '='
+app/views/welcome/index.html.erb:26: syntax error, unexpected '='
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 18:01:03 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.3ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 78]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 78]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 78]]
+  Rendered welcome/index.html.erb within layouts/application (204.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 223ms (Views: 220.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 18:02:14 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.3ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 82]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 82]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 82]]
+  Rendered welcome/index.html.erb within layouts/application (579.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 607ms (Views: 603.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 18:04:26 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.3ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 18]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 18]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 18]]
+  Rendered welcome/index.html.erb within layouts/application (974.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 994ms (Views: 991.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 18:04:58 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.3ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 50]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 50]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 50]]
+  Rendered welcome/index.html.erb within layouts/application (531.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 727ms (Views: 699.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 18:06:07 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.6ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 48]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 48]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 48]]
+  Rendered welcome/index.html.erb within layouts/application (442.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 469ms (Views: 464.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 18:06:42 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.5ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 37]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 37]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 37]]
+  Rendered welcome/index.html.erb within layouts/application (590.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 611ms (Views: 607.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 18:08:54 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.4ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 77]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 77]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 77]]
+  Rendered welcome/index.html.erb within layouts/application (441.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 463ms (Views: 459.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 18:11:07 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.5ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 87]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 87]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 87]]
+  Rendered welcome/index.html.erb within layouts/application (418.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 440ms (Views: 435.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 18:11:19 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.4ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 49]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 49]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 49]]
+  Rendered welcome/index.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 25ms (Views: 20.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 18:13:37 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.3ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 26]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 26]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 26]]
+  Rendered welcome/index.html.erb within layouts/application (911.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 931ms (Views: 927.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 18:14:27 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.4ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 11]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 11]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 11]]
+  Rendered welcome/index.html.erb within layouts/application (157.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 186ms (Views: 181.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/welcome/about" for 127.0.0.1 at 2018-08-07 18:17:57 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#about as HTML
+  Rendering welcome/about.html.erb within layouts/application
+  Rendered welcome/about.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 183ms (Views: 176.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/welcome/about" for 127.0.0.1 at 2018-08-07 18:18:58 -0400
+Processing by WelcomeController#about as HTML
+  Rendering welcome/about.html.erb within layouts/application
+  Rendered welcome/about.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/about" for 127.0.0.1 at 2018-08-07 18:20:21 -0400
+Processing by WelcomeController#about as HTML
+  Rendering welcome/about.html.erb within layouts/application
+  Rendered welcome/about.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/about" for 127.0.0.1 at 2018-08-07 18:23:16 -0400
+Processing by WelcomeController#about as HTML
+  Rendering welcome/about.html.erb within layouts/application
+  Rendered welcome/about.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/about" for 127.0.0.1 at 2018-08-07 18:25:36 -0400
+Processing by WelcomeController#about as HTML
+  Rendering welcome/about.html.erb within layouts/application
+  Rendered welcome/about.html.erb within layouts/application (0.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 18:26:41 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.3ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 32]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 32]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 32]]
+  Rendered welcome/index.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 42ms (Views: 18.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/welcome/about" for 127.0.0.1 at 2018-08-07 18:28:48 -0400
+Processing by WelcomeController#about as HTML
+  Rendering welcome/about.html.erb within layouts/application
+  Rendered welcome/about.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 18:30:59 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.5ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 41]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 41]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 41]]
+  Rendered welcome/index.html.erb within layouts/application (8.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 29ms (Views: 25.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 18:31:02 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.3ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 47]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 47]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 47]]
+  Rendered welcome/index.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 21ms (Views: 18.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/welcome/index" for 127.0.0.1 at 2018-08-07 18:31:02 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mRegisteredApplication Load (0.3ms)[0m  [1m[34mSELECT "registered_applications".* FROM "registered_applications"[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."registered_application_id" = ?[0m  [["registered_application_id", 60]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, "events"."event_name" AS events_event_name FROM "events" WHERE "events"."registered_application_id" = ? GROUP BY "events"."event_name"[0m  [["registered_application_id", 60]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) AS count_all, strftime('%Y-%m-%d 00:00:00 UTC', created_at) AS strftime_y_m_d_00_00_00_utc_created_at FROM "events" WHERE "events"."registered_application_id" = ? AND (created_at IS NOT NULL) GROUP BY strftime('%Y-%m-%d 00:00:00 UTC', created_at)[0m  [["registered_application_id", 60]]
+  Rendered welcome/index.html.erb within layouts/application (18.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 43ms (Views: 40.6ms | ActiveRecord: 0.7ms)
+
+
