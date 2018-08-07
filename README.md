@@ -18,7 +18,8 @@ The client will add this script to their website/application
     request.open("POST", "http://localhost:3000/api/events", true);
     request.setRequestHeader('Content-Type', 'application/json');
     request.send(JSON.stringify(event));
-  };```
+  };
+  ```
 
 
 For a user to track an event, all they have to do is add the snippet `blocmetrics.report('name_of_event')` wherever desired.
